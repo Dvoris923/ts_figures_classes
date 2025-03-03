@@ -51,20 +51,20 @@ export class Circle implements Figure {
 
   color: 'red' | 'green' | 'blue';
 
-  redius: number;
+  radius: number;
 
-  constructor(color: 'red' | 'green' | 'blue', redius: number) {
+  constructor(color: 'red' | 'green' | 'blue', radius: number) {
     this.shape = 'circle';
     this.color = color;
-    this.redius = redius;
+    this.radius = radius;
 
-    if (redius <= 0) {
+    if (radius <= 0) {
       throw new Error('Radius must be greater than 0.');
     }
   }
 
   getArea(): number {
-    const area = Math.PI * this.redius ** 2;
+    const area = Math.PI * this.radius ** 2;
 
     return Math.floor(area * 100) / 100;
   }
